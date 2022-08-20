@@ -4,14 +4,14 @@ const ingredientList = {
     ingredients: [],
 
     // Updates the DOM to display a list of ingredients
-    renderIngredientList: function () {
+    render: function () {
         const ingredientUl = document.querySelector('.ingredient-list');
 
         // Empty the ingredientList before adding any content to it.
         ingredientUl.innerHTML = '';
 
         ingredients.forEach(ingredient => {
-            const ingredientDiv = renderIngredientCard(ingredient);
+            const ingredientDiv = this.renderIngredientCard(ingredient);
             ingredientUl.append(ingredientDiv)
         })
     },
